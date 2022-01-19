@@ -1,3 +1,3 @@
 bucket = "terraformbucket020"
-key    = "vpc/lib/${var.ENV}/terraform.tfstate"
+key    = "vpc/Mutable/${var.ENV}/terraform.tfstate"
 region = "us-east-1"
