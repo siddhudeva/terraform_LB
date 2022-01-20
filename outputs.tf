@@ -10,3 +10,6 @@ output "alb_public_arn" {
 output "alb_private_arn" {
   value = aws_lb.private_lb.arn
 }
+output "private_listner_arn" {
+  value = aws_lb.private_lb.
+}
