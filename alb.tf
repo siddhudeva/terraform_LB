@@ -1,4 +1,4 @@
-resource "aws_lb" "public_lb" {
+resource "aws_lb" "public" {
   name               = "${var.ENV}-alb-public"
   internal           = false
   load_balancer_type = "application"
@@ -11,7 +11,7 @@ resource "aws_lb" "public_lb" {
   }
 }
 
-resource "aws_lb" "private_lb" {
+resource "aws_lb" "private" {
   name               = "${var.ENV}-alb-private"
   internal           = false
   load_balancer_type = "application"
