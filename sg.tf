@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg-public" {
-  name        = "${var.ENV}}-sg-public"
+  name        = "${var.ENV}-sg-public"
   description = "Allow TLS inbound traffic"
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
 
@@ -20,12 +20,12 @@ resource "aws_security_group" "sg-public" {
   }
 
   tags = {
-    Name = "${var.ENV}}-sg-public"
+    Name = "${var.ENV}-sg-public"
   }
 }
 
 resource "aws_security_group" "sg-private" {
-  name        = "${var.ENV}}.sg-private"
+  name        = "${var.ENV}.sg-private"
   description = "HTTP"
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
 
@@ -46,6 +46,6 @@ resource "aws_security_group" "sg-private" {
   }
 
   tags = {
-    Name = "${var.ENV}}_sg-private"
+    Name = "${var.ENV}_sg-private"
   }
 }
