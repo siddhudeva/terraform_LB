@@ -1,3 +1,3 @@
 bucket = "terraformbucket021"
-key    = "vpc/loadbalancer/dev/terraform.tfstate"
+key    = "vpc/alb/dev/terraform.tfstate"
 region = "us-east-1"
