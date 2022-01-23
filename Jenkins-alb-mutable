@@ -13,14 +13,14 @@ pipeline {
 
             stage('Get Git Repo') {
                 steps {
-                    dir('terraform-alb') {
+                    dir('code') {
                         git branch: 'main', url: "https://github.com/siddhudeva/terraform_LB.git"
                     }
                 }
             }
             stage('apply terraform') {
                 steps {
-                    dir('terraform-alb') {
+                    dir('code') {
                         sh '''
                            terraform init -backend-config=./env/${ENVIRONMENT}-backend.tfvars
                            sudo terraform apply -auto-approve -var-file=env/${ENVIRONMENT}.tfvars
