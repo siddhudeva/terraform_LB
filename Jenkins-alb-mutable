@@ -22,16 +22,16 @@ pipeline {
                 steps {
                     dir('code') {
                         sh '''
-                           cd terraform-mutable
                            terraform init -backend-config=env/${ENVIRONMENT}-backend.tfvars
-                           terraform apply -auto-approve -var-file=env/${ENVIRONMENT}.tfvars                       '''
+                           terraform apply -auto-approve -var-file=env/${ENVIRONMENT}.tfvars   
+                           '''
                     }
                 }
             }
         }
-//    post {
-//        always {
-//            cleanWs()
-//        }
-//    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
 }
