@@ -1,6 +1,6 @@
-output "alb_private" {
-  value = aws_lb.private.id
-}
+#output "alb_private" {
+#  value = aws_lb.private.id
+#}
 output "alb_public" {
   value = aws_lb.public.id
 }
