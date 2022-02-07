@@ -2,6 +2,9 @@ resource "aws_security_group" "sg-public" {
   name        = "${var.ENV}-sg-public"
   description = "For Public ALB"
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
+  lifecycle {
+    create_before_destroy = true
+  }
 
   ingress {
     description      = "HTTP"
